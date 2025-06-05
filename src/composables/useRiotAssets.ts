@@ -80,9 +80,6 @@ export const useRiotAssets = () => {
 
       // Check cache and compare versions
       const cached = loadFromCache()
-      console.log('cached', cached)
-      console.log('latest version:', latestVersion)
-      console.log('cached version:', cached?.version)
 
       if (cached && cached.version === latestVersion) {
         // Use cached data if version matches
@@ -92,12 +89,10 @@ export const useRiotAssets = () => {
         summonerSpells.value = cached.summonerSpells
         runes.value = cached.runes
         loading.value = false
-        console.log('Using cached data - version matches')
         return
       }
 
       // Version differs or no cache - fetch new data
-      console.log('Fetching new data - version changed or no cache')
       version.value = latestVersion
 
       // Fetch all data in parallel
@@ -124,7 +119,6 @@ export const useRiotAssets = () => {
 
       // Process items to add id property
       const processedItems: Record<string, Item> = {}
-      console.log('itemsData', itemsData)
       Object.entries(itemsData.data).forEach(([itemId, item]) => {
         processedItems[itemId] = { ...(item as Omit<Item, 'id'>), id: itemId }
       })

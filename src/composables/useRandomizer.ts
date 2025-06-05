@@ -127,8 +127,6 @@ export const useRandomizer = () => {
     // Filter items based on map compatibility and ensure only completed items
     let filteredItems = items
 
-    console.log('items', items)
-
     filteredItems = items.filter(
       (item) =>
         // Check if maps exists and if the required map is available (maps is an object with map IDs as keys)
@@ -255,7 +253,6 @@ export const useRandomizer = () => {
     }
 
     if (!settings) {
-      console.log('No settings provided')
       return result
     }
 

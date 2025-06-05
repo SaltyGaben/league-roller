@@ -9,12 +9,11 @@ const emit = defineEmits<{
     (e: 'reroll', index: number): void
 }>()
 
-const props = defineProps<{
+defineProps<{
     results: RandomizedResult[]
 }>()
 
 const reroll = (index: number) => {
-    console.log('reroll', props.results[index].champion.name)
     emit('reroll', index)
 }
 

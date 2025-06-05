@@ -27,12 +27,8 @@ const setRandomizerSettings = (settings: RandomizerSettings) => {
     randomizerSettings.value = settings
 
     if (isReady.value) {
-        console.log("Data is ready, generating random result")
         const randomResult = generateTeamResult(randomizerSettings.value)
         result.value = randomResult
-        console.log("randomResult", randomResult)
-    } else {
-        console.log("Data is not ready yet, skipping random generation")
     }
 }
 
