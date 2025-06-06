@@ -3,6 +3,7 @@ import { useColorMode } from '@vueuse/core'
 import RandomizerItem from './components/RandomizerItem.vue'
 import { onMounted } from 'vue'
 import { useRiotAssets } from '@/composables/useRiotAssets'
+import { track } from "@vercel/analytics";
 const mode = useColorMode()
 
 const { fetchAssets } = useRiotAssets()
@@ -10,6 +11,7 @@ const { fetchAssets } = useRiotAssets()
 mode.value = 'dark'
 
 onMounted(() => {
+  track('Page View');
   fetchAssets()
 })
 </script>

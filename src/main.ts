@@ -1,11 +1,11 @@
 import './index.css'
 
 import { createApp } from 'vue'
-import { createPinia } from 'pinia'
+import { inject } from '@vercel/analytics'
 import App from './App.vue'
 
-const app = createApp(App)
+inject()
 
-app.use(createPinia())
+const app = createApp(App)
 
 app.mount('#app')

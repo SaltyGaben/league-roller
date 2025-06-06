@@ -82,27 +82,7 @@
   --sidebar-accent-foreground: #343434;
   --sidebar-border: #ebebeb;
   --sidebar-ring: #b5b5b5;
-
-  /* Subtle & Professional */
-  --bg-deep-space: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
-  --bg-midnight: linear-gradient(135deg, #000428 0%, #004e92 100%);
-  --bg-dark-slate: linear-gradient(135deg, #1e1e1e 0%, #2d3748 50%, #1a202c 100%);
-  --bg-charcoal: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
-
-  /* Gaming Vibes */
-  --bg-league-purple: linear-gradient(135deg, #0f0f23 0%, #1e1e3f 50%, #3c366b 100%);
   --bg-cyber: linear-gradient(135deg, #0d1117 0%, #1a1f35 50%, #2d1b69 100%);
-  --bg-dark-magic: linear-gradient(135deg, #0c0c0c 0%, #2d1b69 50%, #11001b 100%);
-  --bg-rift: linear-gradient(135deg, #0a0a0a 0%, #1a2332 50%, #0d4f8c 100%);
-
-  /* High Contrast */
-  --bg-gold-dark: linear-gradient(135deg, #1a1a1a 0%, #2d2416 50%, #1a1611 100%);
-  --bg-champion: linear-gradient(135deg, #0f1419 0%, #1e2328 50%, #0596aa 100%);
-  --bg-shadow: linear-gradient(135deg, #000000 0%, #1a1a2e 30%, #16213e 70%, #0f3460 100%);
-
-  /* Animated */
-  --bg-animated-dark: linear-gradient(-45deg, #000428, #004e92, #1a1a2e, #16213e);
-  --bg-pulse: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
 }
 
 .dark {
@@ -141,27 +121,7 @@
   --sidebar-accent-foreground: #fbfbfb;
   --sidebar-border: #454545;
   --sidebar-ring: #707070;
-
-  /* Subtle & Professional */
-  --bg-deep-space: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
-  --bg-midnight: linear-gradient(135deg, #000428 0%, #004e92 100%);
-  --bg-dark-slate: linear-gradient(135deg, #1e1e1e 0%, #2d3748 50%, #1a202c 100%);
-  --bg-charcoal: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
-
-  /* Gaming Vibes */
-  --bg-league-purple: linear-gradient(135deg, #0f0f23 0%, #1e1e3f 50%, #3c366b 100%);
   --bg-cyber: linear-gradient(135deg, #0d1117 0%, #1a1f35 50%, #2d1b69 100%);
-  --bg-dark-magic: linear-gradient(135deg, #0c0c0c 0%, #2d1b69 50%, #11001b 100%);
-  --bg-rift: linear-gradient(135deg, #0a0a0a 0%, #1a2332 50%, #0d4f8c 100%);
-
-  /* High Contrast */
-  --bg-gold-dark: linear-gradient(135deg, #1a1a1a 0%, #2d2416 50%, #1a1611 100%);
-  --bg-champion: linear-gradient(135deg, #0f1419 0%, #1e2328 50%, #0596aa 100%);
-  --bg-shadow: linear-gradient(135deg, #000000 0%, #1a1a2e 30%, #16213e 70%, #0f3460 100%);
-
-  /* Animated */
-  --bg-animated-dark: linear-gradient(-45deg, #000428, #004e92, #1a1a2e, #16213e);
-  --bg-pulse: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
 }
 
 @layer base {
@@ -179,88 +139,7 @@
 
 /* Gradient Background Utilities */
 @layer utilities {
-  .bg-deep-space {
-    background: var(--bg-deep-space);
-  }
-
-  .bg-midnight {
-    background: var(--bg-midnight);
-  }
-
-  .bg-dark-slate {
-    background: var(--bg-dark-slate);
-  }
-
-  .bg-charcoal {
-    background: var(--bg-charcoal);
-  }
-
-  .bg-league-purple {
-    background: var(--bg-league-purple);
-  }
-
   .bg-cyber {
     background: var(--bg-cyber);
-  }
-
-  .bg-dark-magic {
-    background: var(--bg-dark-magic);
-  }
-
-  .bg-rift {
-    background: var(--bg-rift);
-  }
-
-  .bg-gold-dark {
-    background: var(--bg-gold-dark);
-  }
-
-  .bg-champion {
-    background: var(--bg-champion);
-  }
-
-  .bg-shadow {
-    background: var(--bg-shadow);
-  }
-
-  .bg-animated-dark {
-    background: var(--bg-animated-dark);
-    background-size: 400% 400%;
-    animation: gradientShift 15s ease infinite;
-  }
-
-  .bg-pulse {
-    background: var(--bg-pulse);
-  }
-}
-
-.animated-gradient {
-  background-size: 400% 400%;
-  animation: gradientShift 15s ease infinite;
-}
-
-.pulse-gradient {
-  animation: pulseGlow 8s ease-in-out infinite;
-}
-
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes pulseGlow {
-  0%,
-  100% {
-    filter: brightness(1);
-  }
-  50% {
-    filter: brightness(1.1);
   }
 }
