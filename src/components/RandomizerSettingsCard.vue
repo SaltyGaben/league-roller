@@ -6,7 +6,6 @@ import { Button } from './ui/button'
 import { Input } from './ui/input'
 import { Dices } from 'lucide-vue-next'
 import type { RandomizerSettings } from '../types/Randomizer'
-import { track } from "@vercel/analytics";
 
 const randomizerSettings = ref<RandomizerSettings>({
     mode: 'CLASSIC',
@@ -43,7 +42,6 @@ const emit = defineEmits<{
 }>()
 
 const randomize = () => {
-    track('Randomize')
     emit('randomize', randomizerSettings.value)
 }
 

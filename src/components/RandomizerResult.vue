@@ -4,7 +4,6 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent } from './ui/
 import { Button } from './ui/button'
 import { Dices } from 'lucide-vue-next'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from './ui/tooltip'
-import { track } from '@vercel/analytics'
 
 const emit = defineEmits<{
     (e: 'reroll', index: number): void
@@ -15,7 +14,6 @@ defineProps<{
 }>()
 
 const reroll = (index: number) => {
-    track('Reroll')
     emit('reroll', index)
 }
 
