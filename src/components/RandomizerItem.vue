@@ -41,7 +41,7 @@ const reroll = (index: number) => {
 </script>
 
 <template>
-    <div class="flex flex-col justify-center items-center gap-20 w-full">
+    <div class="flex flex-col justify-center items-center gap-20 ">
         <RandomizerSettingsCard @randomize="setRandomizerSettings" />
         <RandomizerResult :results="result" @reroll="reroll" />
     </div>

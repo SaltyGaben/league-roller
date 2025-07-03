@@ -23,7 +23,7 @@ onMounted(() => {
         A League of Legends randomiser to create a little spice
       </p>
     </div>
-    <div class="flex flex-col justify-center items-center mt-16">
+    <div class="flex flex-col justify-center items-center mt-16 w-full max-w-screen-lg mx-auto">
       <RandomizerItem />
     </div>
   </div>
