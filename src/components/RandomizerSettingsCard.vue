@@ -28,9 +28,9 @@ const tabs = [
         value: 'ARAM',
     },
     {
-        label: 'Brawl',
-        value: 'BRAWL',
-    }
+        label: 'Arena',
+        value: 'ARENA',
+    },
 ]
 
 const setMode = (mode: string) => {
@@ -73,7 +73,8 @@ const randomize = () => {
                             @update:model-value="randomizerSettings.items = $event"
                             class="!h-7 !w-11 [&>[data-slot=switch-thumb]]:!size-5 [&>[data-slot=switch-thumb]]:data-[state=unchecked]:!translate-x-1 hover:cursor-pointer" />
                     </div>
-                    <div class="flex flex-row items-center justify-between h-10">
+                    <div v-if="randomizerSettings.mode !== 'ARENA'"
+                        class="flex flex-row items-center justify-between h-10">
                         <p>Summoner Spells</p>
                         <Switch :model-value="randomizerSettings.summonerSpells"
                             @update:model-value="randomizerSettings.summonerSpells = $event"
@@ -99,7 +100,7 @@ const randomize = () => {
                     </div>
                     <div class="flex flex-row items-center justify-between h-10">
                         <p>Amount of rerolls allowed</p>
-                        <Input type="number" class="w-24" v-model="randomizerSettings.amountOfRerolls" />
+                        <Input type="number" class="w-24" v-model="randomizerSettings.amountOfRerolls" :min="0" />
                     </div>
                 </div>
             </div>
